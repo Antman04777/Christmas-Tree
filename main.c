@@ -16,6 +16,7 @@ static unsigned int flash_speed = 0;
 #define ANSI_COLOR_YELLOW  "\x1b[38;5;226m"
 #define ANSI_COLOR_WHITE   "\x1b[38;5;231m"
 #define ANSI_COLOR_BLACK   "\x1b[38;5;232m"
+#define ANSI_COLOR_GREY    "\x1b[38;5;239m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
 #define INVALID_NUM        0
@@ -70,7 +71,7 @@ draw_tree()
 
 			}
 			else
-				printf(ANSI_COLOR_BLACK "%c" ANSI_COLOR_RESET, tree_char);
+				printf(ANSI_COLOR_GREY "%c" ANSI_COLOR_RESET, tree_char);
 
 		}
 		else if ( tree_char == '*' )
@@ -78,7 +79,7 @@ draw_tree()
 			if ( star_flashing )
 				printf(ANSI_COLOR_YELLOW "%c" ANSI_COLOR_RESET, tree_char);
 			else
-				printf(ANSI_COLOR_BLACK "%c" ANSI_COLOR_RESET, tree_char);
+				printf(ANSI_COLOR_GREY "%c" ANSI_COLOR_RESET, tree_char);
 				
 		}
 		else if ( tree_char == '|' )
@@ -87,7 +88,7 @@ draw_tree()
 		}
 		else
 		{
-			printf(ANSI_COLOR_WHITE "%c" ANSI_COLOR_RESET, tree_char);
+			printf(ANSI_COLOR_GREEN "%c" ANSI_COLOR_RESET, tree_char);
 		}
 	}
 }
