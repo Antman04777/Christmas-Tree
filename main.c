@@ -92,7 +92,7 @@ draw_tree()
 	}
 }
 
-int
+size_t
 get_string_length( const char *string )
 {
 	size_t string_length = 0;
@@ -124,7 +124,7 @@ string_to_int ( const char *string )
 	size_t string_length = get_string_length(string);
 	int string_num = 0;
 
-	for ( int i = 0; i < string_length; ++i )
+	for ( size_t i = 0; i < string_length; ++i )
 	{
 		int digit = *(string + i) - 48;
 		if ( digit < 0 || digit > 9 )
