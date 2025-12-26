@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+#define _BSD_SOURCE
+
 #include <unistd.h>
 #include <stdbool.h>
 #include <stdlib.h>
