@@ -109,7 +109,7 @@ get_string_length( const char *string )
 }
 
 int
-power ( int number, int exponent )
+power( int number, int exponent )
 {
 	int new_number = number;
 
@@ -120,7 +120,7 @@ power ( int number, int exponent )
 }
 
 int
-string_to_int ( const char *string )
+string_to_int( const char *string )
 {
 	size_t string_length = get_string_length(string);
 	int string_num = 0;
@@ -138,7 +138,7 @@ string_to_int ( const char *string )
 }
 
 int
-main ( int argc, char **argv )
+main( int argc, char **argv )
 {
 	switch ( argc )
 	{
