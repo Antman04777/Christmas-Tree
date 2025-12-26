@@ -1,11 +1,13 @@
 #include <stdio.h>
-
-#define _BSD_SOURCE
-
-#include <unistd.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <time.h>
+
+#ifdef __WIN32
+#include <windows.h>
+#else
+#include <unistd.h>
+#endif
 
 static unsigned char *christmas_tree = NULL;
 static size_t tree_file_size = 0;
@@ -168,7 +170,11 @@ main( int argc, char **argv )
 	while ( true )
 	{
 		draw_tree();
+#ifdef __WIN32
+		Sleep(flash_speed / 1000);
+#else
 		usleep(flash_speed);
+#endif
 		fflush(stdout);
 		clear_terminal();
 	}
